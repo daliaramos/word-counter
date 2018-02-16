@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Project.Models;
+using wordCounter.Models;
 
 namespace wordCounter.Models.Tests
 {
@@ -7,10 +7,10 @@ namespace wordCounter.Models.Tests
   public class wordCounterTest
   {
     [TestMethod]
-    public void Test_JustATest_True()
+    public void GetTest_ReturnWord()
     {
-      Assert.AreEqual(true, ProjectModel.Test(true));
-      Assert.AreEqual(false, ProjectModel.Test(false));
+      wordCounter wordCounter = new wordCounter("hello");
+      Assert.AreEqual("hello", wordCounter.GetWords());
     }
   }
 }
