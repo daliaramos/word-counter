@@ -6,34 +6,65 @@ namespace wordCounter.Models
   public class wordCounter
   {
     private string _words;
-    private int _totalWords = 0;
+    private string _sentence;
+    private int _count = 0;
+
+    public wordCounter(string words, string sentence, int count)
+    {
+      _words = words;
+      _sentence = sentence;
+      _count = count;
+    }
 
     public string GetWords()
     {
       return _words;
     }
 
-    public int GetTotalWords()
+    public void SetWords(string words)
     {
-      return _totalWords;
+      _words = words;
     }
 
-     public wordCounter(string words)
-     {
-       _words = words;
-     }
- //
- //     public void addWords()
- //     {
- //    // Create a string array and store the contents of the Lines property.
- //    string[] stringArray= GetWord();
- //
- //    // Loop through the array and send the contents of the array to debug window.
- //    for(int i=0; counter < stringArray.Length; i++)
- //    {
- //       System.Diagnostics.Debug.WriteLine(stringArray[i]);
- //    }
- // }
+    public string GetSentence()
+    {
+      return _sentence;
+    }
 
-  }
+    public void SetSentence(string sentence)
+    {
+      _sentence = sentence;
+    }
+
+    public void SetCount(int count)
+    {
+      _count = count;
+    }
+
+    public int GetCount()
+    {
+      return _count;
+    }
+
+   public int addWords(string word, string sentence)
+     {
+       int count = 0;
+
+       sentence = sentence.ToLower();
+       word = word.ToLower();
+
+       if(sentence == word)
+         return 1;
+
+       string[] wordArray = sentence.Split(' ');
+
+       for(int i = 0; i < wordArray.Length; i++)
+       {
+         if(wordArray[i] == word)
+           count++;
+       }
+
+       return count;
+     }
+   }
 }
