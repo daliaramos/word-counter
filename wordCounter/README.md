@@ -15,8 +15,8 @@ Calculates a word in a sentence
 - example output: 1
 
 * counts words in a array
-- example input: [Hello, my, name, is]
-- example output: 4
+- example input: [Hello Hello my name is]
+- example output: 2
 
 * display total words to view
 

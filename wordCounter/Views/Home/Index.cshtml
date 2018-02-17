@@ -1,6 +1,27 @@
-@{
-  Layout = "_Layout";
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>wordCounter</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='~/css/styles.css'>
+  </head>
+  <body>
+    <form action="/" method="Post">
+    <div class="container">
+        <h1>Word Counter</h1><br>
+      <div class="form-group">
+          <label>Enter a Sentence:</label>
+          <input type="text" name="sentence">
+      </div>
 
-<h2>Index Stuff Goes Here</h2>
-<h3>@Model</h3>
+      <div class="form-group">
+          <label>Enter a word:</label>
+          <input type="text" name="word">
+      </div>
+
+      <button type="btn" name="btn">Enter:</button>
+    </div>
+  </form>
+  </body>
+</html>
