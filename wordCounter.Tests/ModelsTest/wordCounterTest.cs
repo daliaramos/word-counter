@@ -8,16 +8,21 @@ namespace wordCounter.Models.Tests
   {
     [TestMethod]
     public void GetTest_ReturnWord()
-    {
-      wordCounter wordCounter = new wordCounter("hello");
-      Assert.AreEqual("hello", wordCounter.GetWords());
-    }
+      {
+        wordCounter wc = new wordCounter("hello", "hello my name is");
 
-    // [TestMethod]
-    // public void GetCount_ReturnsNumOfWords()
-    // {
-    //   wordCounter wordCounter = new wordCounter("hello hello");
-    //   Assert.AreEqual(2, wordCounter.GetCount());
-    // }
+        Assert.AreEqual("hello", wc.GetWord());
+
+      }
+
+    [TestMethod]
+    public void addWord_words()
+      {
+        wordCounter wc = new wordCounter ("yoyo", "yoyo yoyo yoyo");
+        int Repeat = wc.addWord();
+        int numTimes = 3;
+        Assert.AreEqual(numTimes,Repeat);
+      }
+
   }
 }
