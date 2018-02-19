@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace wordCounter.Models
+namespace word.Models
 {
   public class wordCounter
   {
@@ -35,8 +35,8 @@ namespace wordCounter.Models
           if(s == singleWord.ToLower())
           {
             _counter++;
-          };
-        };
+          }
+        }
       return _counter;
     }
   }
