@@ -30,9 +30,9 @@ namespace word.Models
       string singleWord = _word.ToLower();
       string sentenceString = _sentence.ToLower();
         string[] Input = sentenceString.Split(' ');
-        foreach (string s in Input)
+        foreach (string word in Input)
         {
-          if(s == singleWord.ToLower())
+          if(word == singleWord.ToLower())
           {
             _counter++;
           }
