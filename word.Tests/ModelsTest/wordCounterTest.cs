@@ -16,10 +16,10 @@ namespace word.Models.Tests
       }
 
     [TestMethod]
-    public void addWord_words()
+    public void AddWord_words()
       {
         wordCounter wc = new wordCounter ("yoyo", "yoyo yoyo yoyo");
-        int Repeat = wc.addWord();
+        int Repeat = wc.AddWord();
         int numTimes = 3;
         Assert.AreEqual(numTimes,Repeat);
       }
