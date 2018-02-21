@@ -17,7 +17,7 @@ namespace word.Controllers
     {
       wordCounter wordcounter = new wordCounter(Request.Form["word"], Request.Form["sentence"]
       );
-      int num = wordcounter.addWord();
+      int num = wordcounter.AddWord();
       return View("Results", wordcounter);
     }
   }

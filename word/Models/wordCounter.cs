@@ -24,7 +24,7 @@ namespace word.Models
       return _sentence;
     }
 
-    public int addWord()
+    public int AddWord()
     {
       int _counter = 0;
       string singleWord = _word.ToLower();

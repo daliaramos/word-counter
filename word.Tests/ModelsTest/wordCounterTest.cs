@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using wordCounter.Models;
+using word.Models;
 
-namespace wordCounter.Models.Tests
+namespace word.Models.Tests
 {
   [TestClass]
-  public class wordCounterTest
+  public class wordTest
   {
     [TestMethod]
     public void GetTest_ReturnWord()
